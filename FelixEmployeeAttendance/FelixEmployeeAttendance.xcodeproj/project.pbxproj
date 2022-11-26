@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E0DA5BB2927B7A400353C65 /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DA5BA2927B7A300353C65 /* EmployeeDetailViewController.swift */; };
+		5E35F6042927B2990095764E /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E35F6032927B2990095764E /* AddEmployeeViewController.swift */; };
+		5E35F6062927B2F00095764E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E35F6052927B2F00095764E /* TabBarController.swift */; };
+		5E9DB9E02932359300D968C7 /* Employee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DB9DE2932359300D968C7 /* Employee+CoreDataClass.swift */; };
+		5E9DB9E12932359300D968C7 /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DB9DF2932359300D968C7 /* Employee+CoreDataProperties.swift */; };
+		5E9DB9E4293235A400D968C7 /* Attendance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DB9E2293235A400D968C7 /* Attendance+CoreDataClass.swift */; };
+		5E9DB9E5293235A400D968C7 /* Attendance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DB9E3293235A400D968C7 /* Attendance+CoreDataProperties.swift */; };
+		5EEC6FFD2927A4A100B11866 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC6FFC2927A4A100B11866 /* AppDelegate.swift */; };
+		5EEC6FFF2927A4A100B11866 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC6FFE2927A4A100B11866 /* SceneDelegate.swift */; };
+		5EEC70012927A4A100B11866 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC70002927A4A100B11866 /* ViewController.swift */; };
+		5EEC70042927A4A100B11866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEC70022927A4A100B11866 /* Main.storyboard */; };
+		5EEC70072927A4A100B11866 /* FelixEmployeeAttendance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC70052927A4A100B11866 /* FelixEmployeeAttendance.xcdatamodeld */; };
+		5EEC70092927A4A300B11866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEC70082927A4A300B11866 /* Assets.xcassets */; };
+		5EEC700C2927A4A300B11866 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EEC700A2927A4A300B11866 /* LaunchScreen.storyboard */; };
+		5EEC70142927A9E800B11866 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC70132927A9E800B11866 /* HomeScreenViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5E0DA5BA2927B7A300353C65 /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
+		5E35F6032927B2990095764E /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
+		5E35F6052927B2F00095764E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5E9DB9DE2932359300D968C7 /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5E9DB9DF2932359300D968C7 /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5E9DB9E2293235A400D968C7 /* Attendance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Attendance+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5E9DB9E3293235A400D968C7 /* Attendance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Attendance+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		5EEC6FF92927A4A100B11866 /* FelixEmployeeAttendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FelixEmployeeAttendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EEC6FFC2927A4A100B11866 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5EEC6FFE2927A4A100B11866 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5EEC70002927A4A100B11866 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EEC70032927A4A100B11866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EEC70062927A4A100B11866 /* FelixEmployeeAttendance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FelixEmployeeAttendance.xcdatamodel; sourceTree = "<group>"; };
+		5EEC70082927A4A300B11866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EEC700B2927A4A300B11866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EEC700D2927A4A300B11866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EEC70132927A9E800B11866 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EEC6FF62927A4A100B11866 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EEC6FF02927A4A100B11866 = {
+			isa = PBXGroup;
+			children = (
+				5EEC6FFB2927A4A100B11866 /* FelixEmployeeAttendance */,
+				5EEC6FFA2927A4A100B11866 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EEC6FFA2927A4A100B11866 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC6FF92927A4A100B11866 /* FelixEmployeeAttendance.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EEC6FFB2927A4A100B11866 /* FelixEmployeeAttendance */ = {
+			isa = PBXGroup;
+			children = (
+				5E9DB9E2293235A400D968C7 /* Attendance+CoreDataClass.swift */,
+				5E9DB9E3293235A400D968C7 /* Attendance+CoreDataProperties.swift */,
+				5E9DB9DE2932359300D968C7 /* Employee+CoreDataClass.swift */,
+				5E9DB9DF2932359300D968C7 /* Employee+CoreDataProperties.swift */,
+				5EEC6FFC2927A4A100B11866 /* AppDelegate.swift */,
+				5EEC6FFE2927A4A100B11866 /* SceneDelegate.swift */,
+				5EEC70002927A4A100B11866 /* ViewController.swift */,
+				5EEC70022927A4A100B11866 /* Main.storyboard */,
+				5E0DA5BA2927B7A300353C65 /* EmployeeDetailViewController.swift */,
+				5E35F6052927B2F00095764E /* TabBarController.swift */,
+				5E35F6032927B2990095764E /* AddEmployeeViewController.swift */,
+				5EEC70132927A9E800B11866 /* HomeScreenViewController.swift */,
+				5EEC70082927A4A300B11866 /* Assets.xcassets */,
+				5EEC700A2927A4A300B11866 /* LaunchScreen.storyboard */,
+				5EEC700D2927A4A300B11866 /* Info.plist */,
+				5EEC70052927A4A100B11866 /* FelixEmployeeAttendance.xcdatamodeld */,
+			);
+			path = FelixEmployeeAttendance;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EEC6FF82927A4A100B11866 /* FelixEmployeeAttendance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EEC70102927A4A300B11866 /* Build configuration list for PBXNativeTarget "FelixEmployeeAttendance" */;
+			buildPhases = (
+				5EEC6FF52927A4A100B11866 /* Sources */,
+				5EEC6FF62927A4A100B11866 /* Frameworks */,
+				5EEC6FF72927A4A100B11866 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FelixEmployeeAttendance;
+			productName = FelixEmployeeAttendance;
+			productReference = 5EEC6FF92927A4A100B11866 /* FelixEmployeeAttendance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EEC6FF12927A4A100B11866 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					5EEC6FF82927A4A100B11866 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 5EEC6FF42927A4A100B11866 /* Build configuration list for PBXProject "FelixEmployeeAttendance" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EEC6FF02927A4A100B11866;
+			productRefGroup = 5EEC6FFA2927A4A100B11866 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EEC6FF82927A4A100B11866 /* FelixEmployeeAttendance */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EEC6FF72927A4A100B11866 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EEC700C2927A4A300B11866 /* LaunchScreen.storyboard in Resources */,
+				5EEC70092927A4A300B11866 /* Assets.xcassets in Resources */,
+				5EEC70042927A4A100B11866 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EEC6FF52927A4A100B11866 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9DB9E4293235A400D968C7 /* Attendance+CoreDataClass.swift in Sources */,
+				5E35F6042927B2990095764E /* AddEmployeeViewController.swift in Sources */,
+				5E9DB9E02932359300D968C7 /* Employee+CoreDataClass.swift in Sources */,
+				5EEC70012927A4A100B11866 /* ViewController.swift in Sources */,
+				5E9DB9E5293235A400D968C7 /* Attendance+CoreDataProperties.swift in Sources */,
+				5EEC6FFD2927A4A100B11866 /* AppDelegate.swift in Sources */,
+				5E0DA5BB2927B7A400353C65 /* EmployeeDetailViewController.swift in Sources */,
+				5EEC6FFF2927A4A100B11866 /* SceneDelegate.swift in Sources */,
+				5E35F6062927B2F00095764E /* TabBarController.swift in Sources */,
+				5EEC70072927A4A100B11866 /* FelixEmployeeAttendance.xcdatamodeld in Sources */,
+				5EEC70142927A9E800B11866 /* HomeScreenViewController.swift in Sources */,
+				5E9DB9E12932359300D968C7 /* Employee+CoreDataProperties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5EEC70022927A4A100B11866 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EEC70032927A4A100B11866 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EEC700A2927A4A300B11866 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EEC700B2927A4A300B11866 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EEC700E2927A4A300B11866 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5EEC700F2927A4A300B11866 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EEC70112927A4A300B11866 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FelixEmployeeAttendance/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Felix.FelixEmployeeAttendance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EEC70122927A4A300B11866 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FelixEmployeeAttendance/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Felix.FelixEmployeeAttendance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EEC6FF42927A4A100B11866 /* Build configuration list for PBXProject "FelixEmployeeAttendance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EEC700E2927A4A300B11866 /* Debug */,
+				5EEC700F2927A4A300B11866 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EEC70102927A4A300B11866 /* Build configuration list for PBXNativeTarget "FelixEmployeeAttendance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EEC70112927A4A300B11866 /* Debug */,
+				5EEC70122927A4A300B11866 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5EEC70052927A4A100B11866 /* FelixEmployeeAttendance.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5EEC70062927A4A100B11866 /* FelixEmployeeAttendance.xcdatamodel */,
+			);
+			currentVersion = 5EEC70062927A4A100B11866 /* FelixEmployeeAttendance.xcdatamodel */;
+			path = FelixEmployeeAttendance.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5EEC6FF12927A4A100B11866 /* Project object */;
+}
