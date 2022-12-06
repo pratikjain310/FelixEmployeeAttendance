@@ -355,19 +355,89 @@
         <!--Employee Name-->
         <scene sceneID="4db-Bp-ZTL">
             <objects>
-                <viewController id="4Y9-E8-Npo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AttendanceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Y9-E8-Npo" customClass="AttendanceViewController" customModule="FelixEmployeeAttendance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e7P-RU-35F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="e8H-I4-SOB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="109" id="Whh-CU-ny1" customClass="AttendanceTableViewCell" customModule="FelixEmployeeAttendance" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="109"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Whh-CU-ny1" id="nPr-EY-2nM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="klM-Eb-lCz">
+                                                    <rect key="frame" x="186.5" y="12" width="41.5" height="91"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ME-xF-N36">
+                                                            <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0G-yG-Agu">
+                                                            <rect key="frame" x="0.0" y="23.5" width="41.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEI-pj-VLy">
+                                                            <rect key="frame" x="0.0" y="47" width="41.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jf-rS-0xo">
+                                                            <rect key="frame" x="0.0" y="70.5" width="41.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="klM-Eb-lCz" firstAttribute="centerX" secondItem="nPr-EY-2nM" secondAttribute="centerX" id="W7v-Cz-ciM"/>
+                                                <constraint firstItem="klM-Eb-lCz" firstAttribute="top" secondItem="nPr-EY-2nM" secondAttribute="top" constant="12" id="ecA-ht-rQn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="attendanceIdLabel" destination="7ME-xF-N36" id="zdN-JR-keD"/>
+                                            <outlet property="dateLabel" destination="4jf-rS-0xo" id="lwI-2J-pQh"/>
+                                            <outlet property="idLabel" destination="V0G-yG-Agu" id="NxG-yj-nLJ"/>
+                                            <outlet property="nameLabel" destination="QEI-pj-VLy" id="cxZ-jP-2aQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4Y9-E8-Npo" id="jKR-IX-VCg"/>
+                                    <outlet property="delegate" destination="4Y9-E8-Npo" id="3Vj-Qj-cDX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VAJ-3H-I5a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e8H-I4-SOB" firstAttribute="top" secondItem="VAJ-3H-I5a" secondAttribute="top" id="Xee-rx-nDo"/>
+                            <constraint firstItem="VAJ-3H-I5a" firstAttribute="bottom" secondItem="e8H-I4-SOB" secondAttribute="bottom" id="kzP-bb-4AP"/>
+                            <constraint firstItem="VAJ-3H-I5a" firstAttribute="trailing" secondItem="e8H-I4-SOB" secondAttribute="trailing" id="pJC-WS-GbH"/>
+                            <constraint firstItem="e8H-I4-SOB" firstAttribute="leading" secondItem="VAJ-3H-I5a" secondAttribute="leading" id="uqu-Wb-tZZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Attendance" image="calendar.badge.clock" catalog="system" id="e8K-uB-yBY"/>
                     <navigationItem key="navigationItem" title="Employee Name" id="hV9-P2-hm1"/>
+                    <connections>
+                        <outlet property="attendanceTableView" destination="e8H-I4-SOB" id="PgU-zb-5r2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Js-G8-JXn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5126" y="1365"/>
+            <point key="canvasLocation" x="5124.6376811594209" y="1364.7321428571429"/>
         </scene>
         <!--Add Employee-->
         <scene sceneID="9VP-qC-ZDc">

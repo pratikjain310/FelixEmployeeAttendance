@@ -10,6 +10,8 @@
 		5E0DA5BB2927B7A400353C65 /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DA5BA2927B7A300353C65 /* EmployeeDetailViewController.swift */; };
 		5E35F6042927B2990095764E /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E35F6032927B2990095764E /* AddEmployeeViewController.swift */; };
 		5E35F6062927B2F00095764E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E35F6052927B2F00095764E /* TabBarController.swift */; };
+		5E649E8E2934C11F00616E86 /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E649E8D2934C11F00616E86 /* AttendanceViewController.swift */; };
+		5E649E902934C19300616E86 /* AttendanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E649E8F2934C19300616E86 /* AttendanceTableViewCell.swift */; };
 		5E9DB9E02932359300D968C7 /* Employee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DB9DE2932359300D968C7 /* Employee+CoreDataClass.swift */; };
 		5E9DB9E12932359300D968C7 /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DB9DF2932359300D968C7 /* Employee+CoreDataProperties.swift */; };
 		5E9DB9E4293235A400D968C7 /* Attendance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9DB9E2293235A400D968C7 /* Attendance+CoreDataClass.swift */; };
@@ -28,6 +30,8 @@
 		5E0DA5BA2927B7A300353C65 /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
 		5E35F6032927B2990095764E /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
 		5E35F6052927B2F00095764E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5E649E8D2934C11F00616E86 /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		5E649E8F2934C19300616E86 /* AttendanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceTableViewCell.swift; sourceTree = "<group>"; };
 		5E9DB9DE2932359300D968C7 /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		5E9DB9DF2932359300D968C7 /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		5E9DB9E2293235A400D968C7 /* Attendance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Attendance+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -82,6 +86,8 @@
 				5EEC6FFE2927A4A100B11866 /* SceneDelegate.swift */,
 				5EEC70002927A4A100B11866 /* ViewController.swift */,
 				5EEC70022927A4A100B11866 /* Main.storyboard */,
+				5E649E8F2934C19300616E86 /* AttendanceTableViewCell.swift */,
+				5E649E8D2934C11F00616E86 /* AttendanceViewController.swift */,
 				5E0DA5BA2927B7A300353C65 /* EmployeeDetailViewController.swift */,
 				5E35F6052927B2F00095764E /* TabBarController.swift */,
 				5E35F6032927B2990095764E /* AddEmployeeViewController.swift */,
@@ -165,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E649E8E2934C11F00616E86 /* AttendanceViewController.swift in Sources */,
 				5E9DB9E4293235A400D968C7 /* Attendance+CoreDataClass.swift in Sources */,
 				5E35F6042927B2990095764E /* AddEmployeeViewController.swift in Sources */,
 				5E9DB9E02932359300D968C7 /* Employee+CoreDataClass.swift in Sources */,
@@ -176,6 +183,7 @@
 				5E35F6062927B2F00095764E /* TabBarController.swift in Sources */,
 				5EEC70072927A4A100B11866 /* FelixEmployeeAttendance.xcdatamodeld in Sources */,
 				5EEC70142927A9E800B11866 /* HomeScreenViewController.swift in Sources */,
+				5E649E902934C19300616E86 /* AttendanceTableViewCell.swift in Sources */,
 				5E9DB9E12932359300D968C7 /* Employee+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

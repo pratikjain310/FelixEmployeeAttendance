@@ -12,11 +12,11 @@ class HomeScreenViewController: UIViewController {
     var emparr : [Employee] = []
     var attenarr : [Attendance] = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-   
+    
     var flag = 1
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -37,9 +37,6 @@ class HomeScreenViewController: UIViewController {
     func fetch1(){
         do {
             attenarr = try context.fetch(Attendance.fetchRequest())
-//            DispatchQueue.main.async {
-//                self.employeeTableView.reloadData()
-//            }
         }catch let error{
             print(error.localizedDescription)
         }
@@ -59,7 +56,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let emp = emparr[indexPath.row]
         let ca = UIContextualAction(style: .destructive, title: "Delete") { [unowned self](action, view, nil) in
-        
+            
             let a = UIAlertController(title: "Delete", message: "Do you want to Delete?", preferredStyle: .alert)
             
             let yesAction = UIAlertAction(title: "Yes", style: .destructive) { [unowned self] (action) in
@@ -82,45 +79,102 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource{
         
         return UISwipeActionsConfiguration(actions: [ca])
     }
+    
+    
+    
+    func markPresent(attend : Attendance, emp : Employee){
+        let todaysDate = NSDate()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let dateInFormat = dateFormatter.string(from: todaysDate as Date)
+        attend.id = emp.id
+        attend.name = emp.name
+        attend.attendance_Date = dateFormatter.date(from: dateInFormat)
+        do{
+            try context.save()
+            fetch()
+            fetch1()
+        }catch let error{
+            print(error.localizedDescription)
+        }
+        let alert = UIAlertController(title: "Alert", message: "Marked As Present", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .cancel) { [unowned self] (action) in
+            self.employeeTableView.reloadData()
+            tabBarController?.selectedIndex = 2
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+        
+    }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        if flag == 0{
-        let ca = UIContextualAction(style: .normal, title: "Present") { [unowned self] (action, view, nil) in
-//            let atten = attenarr[indexPath.row]
-//            let emp = emparr[indexPath.row]
-//            if attenarr.isEmpty {
-//                atten.attendance_Id = 1
-//            }else {
-//                atten.attendance_Id = Int64(attenarr.count + 1)
-//            }
-//            atten.id = emp.id
-//            atten.name = emp.name
-//            let todaysDate = NSDate()
-//            let dateFormatter = DateFormatter()
-//            dateFormatter.dateFormat = "dd/MM/yyyy"
-//            let dateInFormat = dateFormatter.string(from: todaysDate as Date)
-//            atten.attendance_Date = dateFormatter.date(from: dateInFormat)
-//            do{
-//                try context.save()
-//            }catch let error{
-//                print(error.localizedDescription)
-//            }
+        //MARK :- Present Section
+        let presentAction = UIContextualAction(style: .normal, title: "Present") { [unowned self] (action, view, nil) in
+            let attend = Attendance(context: context)
+            let emp = emparr[indexPath.row]
             
+            if attenarr.isEmpty {
+                attend.attendance_Id = 1
+                markPresent(attend: attend, emp: emp)
+            }else {
+                let a = attenarr.filter{ $0.id == emp.id }
+                if a.isEmpty{
+                    let last = attenarr.last
+                    var id = last?.id
+                    id! += 1
+                    attend.attendance_Id = id!
+                    markPresent(attend: attend, emp: emp)
+                }else {
+                    let alert = UIAlertController(title: "Alert", message: "Already Marked As Present", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .cancel) { [unowned self] (action) in
+                        self.employeeTableView.reloadData()
+                        tabBarController?.selectedIndex = 2
+                    }
+                    alert.addAction(okAction)
+                    present(alert, animated: true)
+                } // MARK :- Write proper code for present and absent not working properly
+            }
+        }
+        presentAction.backgroundColor = UIColor.brown
+        
+        
+        //MARK :- Absent Section
+        let absentAction = UIContextualAction(style: .normal, title: "Absent") { [unowned self] (action, view, nil) in
+            if attenarr.isEmpty {
+                let alert = UIAlertController(title: "Alert", message: "No record found to mark Absent", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Ok", style: .cancel) { [unowned self] (action) in
+                    self.employeeTableView.reloadData()
+                }
+                alert.addAction(okAction)
+                present(alert, animated: true)
+            }else {
+                let emp = emparr[indexPath.row]
+                let attend = attenarr[indexPath.row]
+                if attend.id == emp.id{
+                    let todaysDate = NSDate()
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "dd/MM/yyyy"
+                    let dateInFormat = dateFormatter.string(from: todaysDate as Date)
+                    let currentDate = dateFormatter.date(from: dateInFormat)
+                    if attend.attendance_Date == currentDate{
+                        context.delete(attend)
+                        try? context.save()
+                        let alert = UIAlertController(title: "Alert", message: "Marked As Absent", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "Ok", style: .cancel) { [unowned self] (action) in
+                            self.employeeTableView.reloadData()
+                            tabBarController?.selectedIndex = 2
+                        }
+                        alert.addAction(okAction)
+                        present(alert, animated: true)
+                    }
+                }
+            }
             
-            //MARK :- present absent make 2 different button because its coming alternate present or absent on each cell
             self.employeeTableView.reloadData()
         }
-        flag = 1
-        ca.backgroundColor = UIColor.blue
-        return UISwipeActionsConfiguration(actions: [ca])
-        }else {
-            let ca = UIContextualAction(style: .normal, title: "Absent") { [unowned self] (action, view, nil) in
-             
-                self.employeeTableView.reloadData()
-            }
-            flag = 0
-            ca.backgroundColor = UIColor.blue
-            return UISwipeActionsConfiguration(actions: [ca])
-        }
+        absentAction.backgroundColor = UIColor.brown
+        
+        return UISwipeActionsConfiguration(actions: [presentAction, absentAction])
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "EmployeeDetailViewController")as! EmployeeDetailViewController
